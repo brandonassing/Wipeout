@@ -51,7 +51,7 @@ class AddForm extends Component {
         <div className="uk-margin">
             <label className="uk-form-label" htmlFor="form-horizontal-text">Number</label>
             <div className="uk-form-controls">
-                <input className="uk-input" id="form-horizontal-text" type="text" placeholder="1 (647) 777-7777" value={this.state.number} onChange={this.handleChangeNumber} />
+                <input className="uk-input" id="form-horizontal-text" type="text" placeholder="1 (647) 244-7667" value={this.state.number} onChange={this.handleChangeNumber} />
             </div>
         </div>
         <div className="uk-margin">
