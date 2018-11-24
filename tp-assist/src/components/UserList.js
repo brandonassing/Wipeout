@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './UserList.css';
 
-
 class UserList extends Component {
   constructor(props) {
     super(props);
@@ -33,7 +32,7 @@ class UserList extends Component {
                 {userList.map(item => (
                   <tr key={item[0]}>
                     <td>{item[0]}</td>
-                    <td>{item[1].slice(1, item[1].length)}</td>
+                    <td>{"(" + item[1].slice(1, 4) + ") " + item[1].slice(4, 7) + "-" + item[1].slice(7, 11) }</td>
                     <td><button id={item[0]} className="uk-button uk-button-default" type="button" onClick={(e) => { this.remove(e); }}>Delete</button></td>
                   </tr>
                 ))}
