@@ -33,7 +33,7 @@ class UserList extends Component {
                   <tr key={item[0]}>
                     <td>{item[0]}</td>
                     <td>{"(" + item[1].slice(1, 4) + ") " + item[1].slice(4, 7) + "-" + item[1].slice(7, 11) }</td>
-                    <td><button id={item[0]} className="uk-button uk-button-default" type="button" onClick={(e) => { this.remove(e); }}>Delete</button></td>
+                    <td><button id={item[0]} className="uk-button uk-button-default" type="button" onClick={(e) => { this.remove(e); }}>Remove</button></td>
                   </tr>
                 ))}
             </tbody>

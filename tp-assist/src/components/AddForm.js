@@ -27,7 +27,8 @@ class AddForm extends Component {
   }
 
   shouldBeDisabled() {
-    if(this.state.name.length > 0 && (/\d{10,11}/g).test(this.state.number.replace(/[- )()]/g,''))) {
+    let rawNum = this.state.number.replace(/[- )()]/g,'');
+    if(this.state.name.length > 0 && !isNaN(rawNum) && (rawNum.length == 10 || (rawNum.length == 11 && rawNum.slice(0,1) == "1"))) {
       return false;
     }
     return true;
@@ -66,7 +67,7 @@ class AddForm extends Component {
             </div>
         </div>
         <div className="uk-margin">
-            <button type="submit" value="Submit" className="uk-button uk-button-default" disabled={disabled}>Add</button>
+            <button type="submit" value="Submit" className="uk-button uk-button-primary" disabled={disabled}>Add</button>
         </div>
       </form>
 
