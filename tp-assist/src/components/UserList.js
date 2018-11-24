@@ -21,7 +21,7 @@ class UserList extends Component {
       //TODO format number
       return (
         <div id="userlist-body" className="uk-container">
-        <table className="uk-table uk-table-striped">
+        <table className="uk-table uk-table-striped ">
             <thead>
                 <tr>
                     <th>Name</th>
@@ -33,7 +33,7 @@ class UserList extends Component {
                 {userList.map(item => (
                   <tr key={item[0]}>
                     <td>{item[0]}</td>
-                    <td>{item[1]}</td>
+                    <td>{item[1].slice(1, item[1].length)}</td>
                     <td><button id={item[0]} className="uk-button uk-button-default" type="button" onClick={(e) => { this.remove(e); }}>Delete</button></td>
                   </tr>
                 ))}
