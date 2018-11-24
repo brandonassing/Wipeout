@@ -45,7 +45,7 @@ class AddForm extends Component {
         <div className="uk-margin">
             <label className="uk-form-label" htmlFor="form-horizontal-text">Name</label>
             <div className="uk-form-controls">
-                <input className="uk-input" id="form-horizontal-text" type="text" placeholder="Michael Scott" value={this.state.name} onChange={this.handleChangeName} />
+                <input className="uk-input" id="form-horizontal-text" type="text" placeholder="John Crapper" value={this.state.name} onChange={this.handleChangeName} />
             </div>
         </div>
         <div className="uk-margin">
