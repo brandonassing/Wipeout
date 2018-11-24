@@ -38,39 +38,23 @@ class AddForm extends Component {
     return (
       <div>
       <form className="uk-form-horizontal uk-margin-large" onSubmit={this.handleSubmit}>
-        <label>
-          Name:
-          <input type="text" value={this.state.name} onChange={this.handleChangeName} />
-        </label>
-        <label>
-          Number:
-          <input type="text" value={this.state.number} onChange={this.handleChangeNumber} />
-        </label>
-        <input type="submit" value="Submit" />
+        <div className="uk-margin">
+            <label className="uk-form-label" htmlFor="form-horizontal-text">Name</label>
+            <div className="uk-form-controls">
+                <input className="uk-input" id="form-horizontal-text" type="text" placeholder="Michael Scott" value={this.state.name} onChange={this.handleChangeName} />
+            </div>
+        </div>
+        <div className="uk-margin">
+            <label className="uk-form-label" htmlFor="form-horizontal-text">Name</label>
+            <div className="uk-form-controls">
+                <input className="uk-input" id="form-horizontal-text" type="text" placeholder="1 (647) 777-7777" value={this.state.number} onChange={this.handleChangeNumber} />
+            </div>
+        </div>
+        <div className="uk-margin">
+            <button type="submit" value="Submit" className="uk-button uk-button-default">Add</button>
+        </div>
       </form>
 
-
-      <form className="uk-form-horizontal uk-margin-large">
-
-          <div className="uk-margin">
-              <label className="uk-form-label" htmlFor="form-horizontal-text">Name</label>
-              <div className="uk-form-controls">
-                  <input className="uk-input" id="form-horizontal-text" type="text" placeholder="Michael Scott" />
-              </div>
-          </div>
-
-          <div className="uk-margin">
-              <label className="uk-form-label" htmlFor="form-horizontal-text">Number</label>
-              <div className="uk-form-controls">
-                  <input className="uk-input" id="form-horizontal-text" type="text" placeholder="(647) 777-7777" />
-              </div>
-          </div>
-
-          <div className="uk-margin">
-              <button className="uk-button uk-button-default">Add</button>
-          </div>
-
-      </form>
       </div>
     );
   }
