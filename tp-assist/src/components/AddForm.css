@@ -2,7 +2,20 @@
   /* background-color: #133a32; */
   padding: 15px;
 }
+
+.uk-card-default {
+  box-shadow: 0 5px 15px #EFF7FF;
+  border-radius: 12px;
+}
 /*
 label {
   color: white;
 } */
+
+#add-button-div {
+  margin-bottom: 0px;
+}
+
+#add-button {
+  border-radius: 36px;
+}

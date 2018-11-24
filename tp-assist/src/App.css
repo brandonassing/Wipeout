@@ -1,4 +1,56 @@
-#app-content {
-  margin-top: 15px;
-  margin-bottom: 15px;
+@font-face {
+    font-family: CircularStd;
+    font-weight: normal;
+    src: url("./font/CircularStd-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: CircularStd;
+    font-weight: bold;
+    src: url("./font/CircularStd-Bold.otf") format("opentype");
+}
+
+#app-background {
+  height: 75vh;
+  background-color: #EFF7FF;
+}
+
+#app-body {
+  display: flex;
+  margin-left: 300px;
+  margin-right: 300px;
+  align-items: center;
+}
+
+#app-add {
+  margin-left: 100px;
+  width: 550px;
+}
+
+#slogan, #header-text {
+  font-weight: bold;
+  font-family: CircularStd;
+}
+
+#slogan {
+  font-size: 70px;
+  line-height: 100%;
+  color: #007AFF;
+  margin-bottom: 40px;
+
+}
+
+#header-text {
+  padding-top: 40px;
+  margin: 0px 50px 50px 80px;
+  font-size: 30px;
+  color: #007AFF;
+}
+
+#app-gif {
+  background-color: red;
+  /* height: 507px;
+  width: 818px; */
+  height: 695px;
+  min-width: 350px;
 }
