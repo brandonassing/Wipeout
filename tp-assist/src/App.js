@@ -90,7 +90,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Header name="TP ME"/>
+        <Header name="Wipe Out"/>
         <div id="app-content">
           <AddForm addCallback={this.add} />
           <UserList userList={this.state.userList} isLoaded={this.state.isLoaded} removeCallback={this.remove} />

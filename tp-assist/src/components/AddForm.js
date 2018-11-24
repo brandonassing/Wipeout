@@ -7,6 +7,7 @@ class AddForm extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChangeName = this.handleChangeName.bind(this);
     this.handleChangeNumber = this.handleChangeNumber.bind(this);
+    this.shouldBeDisabled = this.shouldBeDisabled.bind(this);
     this.state = {
       name: "",
       number: ""
@@ -25,20 +26,30 @@ class AddForm extends Component {
     });
   }
 
-  handleSubmit(event) {
-    let number = this.state.number.replace(/[- )()]/g,'');
-    if (number.length == 10) {
-      number = "1" + number;
+  shouldBeDisabled() {
+    if(this.state.name.length > 0 && (/\d{10,11}/g).test(this.state.number.replace(/[- )()]/g,''))) {
+      return false;
     }
-    this.props.addCallback(this.state.name, number);
-    this.setState({
-      name: "",
-      number: ""
-    });
-    event.preventDefault();
+    return true;
+  }
+
+  handleSubmit(event) {
+    if(!this.shouldBeDisabled()) {
+      let number = this.state.number.replace(/[- )()]/g,'');
+      if (number.length == 10) {
+        number = "1" + number;
+      }
+      this.props.addCallback(this.state.name, number);
+      this.setState({
+        name: "",
+        number: ""
+      });
+      event.preventDefault();
+    }
   }
 
   render() {
+    let disabled = this.shouldBeDisabled();
     return (
       <div id="form-body" className="uk-container">
       <form className="uk-form-horizontal uk-margin-large" onSubmit={this.handleSubmit}>
@@ -55,7 +66,7 @@ class AddForm extends Component {
             </div>
         </div>
         <div className="uk-margin">
-            <button type="submit" value="Submit" className="uk-button uk-button-default">Add</button>
+            <button type="submit" value="Submit" className="uk-button uk-button-default" disabled={disabled}>Add</button>
         </div>
       </form>
 
