@@ -29,7 +29,7 @@ class AddForm extends Component {
 
   shouldBeDisabled() {
     let rawNum = this.state.number.replace(/[- )()]/g,'');
-    if(this.state.name.length > 0 && !isNaN(rawNum) && (rawNum.length == 10 || (rawNum.length == 11 && rawNum.slice(0,1) == "1"))) {
+    if(this.state.name.length > 0 && !isNaN(rawNum) && (rawNum.length === 10 || (rawNum.length ===11 && rawNum.slice(0,1) === "1"))) {
       return false;
     }
     return true;
@@ -38,7 +38,7 @@ class AddForm extends Component {
   handleSubmit(event) {
     if(!this.shouldBeDisabled()) {
       let number = this.state.number.replace(/[- )()]/g,'');
-      if (number.length == 10) {
+      if (number.length === 10) {
         number = "1" + number;
       }
       this.props.addCallback(this.state.name, number);
