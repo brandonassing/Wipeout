@@ -26,7 +26,11 @@ class AddForm extends Component {
   }
 
   handleSubmit(event) {
-    this.props.addCallback(this.state.name, this.state.number);
+    let number = this.state.number;
+    if (number.length !== 11) {
+      number = "1" + number.replace(/[- )()]/g,'');
+    }
+    this.props.addCallback(this.state.name, number);
     this.setState({
       name: "",
       number: ""
