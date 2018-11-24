@@ -1,0 +1,10 @@
+#header-body {
+  padding: 20px;
+  background-image: url('../assets/wallpaper.jpg') ;
+  background-position: center;
+  height: 60vh;
+}
+h1 {
+  text-align: center;
+  color: white;
+}

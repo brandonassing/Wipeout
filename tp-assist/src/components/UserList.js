@@ -20,6 +20,7 @@ class UserList extends Component {
     } else {
       //TODO format number
       return (
+        <div id="userlist-body" className="uk-container">
         <table className="uk-table uk-table-striped">
             <thead>
                 <tr>
@@ -38,6 +39,7 @@ class UserList extends Component {
                 ))}
             </tbody>
         </table>
+        </div>
       );
     }
   }

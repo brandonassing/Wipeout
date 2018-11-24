@@ -91,8 +91,10 @@ class App extends Component {
     return (
       <div>
         <Header name="TP ME"/>
-        <AddForm addCallback={this.add} />
-        <UserList userList={this.state.userList} isLoaded={this.state.isLoaded} removeCallback={this.remove} />
+        <div id="app-content">
+          <AddForm addCallback={this.add} />
+          <UserList userList={this.state.userList} isLoaded={this.state.isLoaded} removeCallback={this.remove} />
+        </div>
       </div>
     );
   }
