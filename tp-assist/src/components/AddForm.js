@@ -54,7 +54,7 @@ class AddForm extends Component {
     let disabled = this.shouldBeDisabled();
     return (
 
-      <div id="add-card" className="uk-card uk-card-default uk-card-body uk-border-rounded">
+      <div id="add-card" className="uk-card uk-card-default uk-card-body uk-border-rounded .uk-box-shadow-large">
         <div id="form-body" className="uk-container">
         <form className="uk-form-horizontal uk-margin-large" onSubmit={this.handleSubmit}>
               <label className="uk-form-label" htmlFor="input-name">Name</label>
@@ -64,7 +64,7 @@ class AddForm extends Component {
               <input className="uk-input uk-form-large" id="input-number" type="text" placeholder="1 (647) 244-7667" value={this.state.number} onChange={this.handleChangeNumber} />
           </div>
           <div id="add-button-div">
-              <button id="add-button" type="submit" value="Submit" className="uk-button uk-button-large uk-button-primary" disabled={disabled}>Add</button>
+              <button id="add-button" type="submit" value="Submit" className="uk-button uk-button-large uk-button-primary" disabled={disabled}>Doody calls</button>
           </div>
         </form>
         </div>
