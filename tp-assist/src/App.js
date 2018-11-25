@@ -11,7 +11,8 @@ class App extends Component {
     super(props);
     this.state = {
       isLoaded: false,
-      userList: []
+      userList: [],
+      error: ""
     };
     this.remove = this.remove.bind(this);
     this.add = this.add.bind(this);
@@ -33,7 +34,8 @@ class App extends Component {
           (error) => {
             this.setState({
               isLoaded: true,
-              error: error
+              error: error,
+              userList: []
             });
           }
         );
@@ -58,7 +60,8 @@ class App extends Component {
           (error) => {
             this.setState({
               isLoaded: true,
-              error: error
+              error: error,
+              userList: []
             });
           }
         );
@@ -81,7 +84,8 @@ class App extends Component {
         (error) => {
           this.setState({
             isLoaded: true,
-            error: error
+            error: error,
+            userList: []
           });
         }
       )

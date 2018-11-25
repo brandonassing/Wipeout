@@ -14,7 +14,8 @@ class UserList extends Component {
 
   render() {
     const { isLoaded, userList } = this.props;
-    if (!isLoaded) {
+    console.log(userList);
+    if (!isLoaded || !Array.isArray(userList) || userList === undefined || userList === null || userList.length === 0) {
       return (
         <div id="userlist-body" className="uk-container">
         <table className="uk-table uk-table-striped uk-table-small">
