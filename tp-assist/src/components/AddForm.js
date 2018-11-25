@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './AddForm.css';
+import '../App.css';
 
 class AddForm extends Component {
   constructor(props) {
@@ -52,26 +53,25 @@ class AddForm extends Component {
   render() {
     let disabled = this.shouldBeDisabled();
     return (
-      <div id="form-body" className="uk-container">
-      <form className="uk-form-horizontal uk-margin-large" onSubmit={this.handleSubmit}>
-        <div className="uk-margin">
-            <label className="uk-form-label" htmlFor="form-horizontal-text">Name</label>
-            <div className="uk-form-controls">
-                <input className="uk-input" id="form-horizontal-text" type="text" placeholder="John Crapper" value={this.state.name} onChange={this.handleChangeName} />
-            </div>
-        </div>
-        <div className="uk-margin">
-            <label className="uk-form-label" htmlFor="form-horizontal-text">Number</label>
-            <div className="uk-form-controls">
-                <input className="uk-input" id="form-horizontal-text" type="text" placeholder="1 (647) 244-7667" value={this.state.number} onChange={this.handleChangeNumber} />
-            </div>
-        </div>
-        <div className="uk-margin">
-            <button type="submit" value="Submit" className="uk-button uk-button-primary" disabled={disabled}>Add</button>
-        </div>
-      </form>
 
+      <div id="add-card" className="uk-card uk-card-default uk-card-body uk-border-rounded">
+        <div id="form-body" className="uk-container">
+        <form className="uk-form-horizontal uk-margin-large" onSubmit={this.handleSubmit}>
+          <div className="uk-margin">
+              <label className="uk-form-label" htmlFor="input-name">Name</label>
+                  <input className="uk-input" id="input-name" type="text" placeholder="John Crapper" value={this.state.name} onChange={this.handleChangeName} />
+          </div>
+          <div className="uk-margin">
+              <label className="uk-form-label" htmlFor="input-number">Number</label>
+                  <input className="uk-input" id="input-number" type="text" placeholder="1 (647) 244-7667" value={this.state.number} onChange={this.handleChangeNumber} />
+          </div>
+          <div id="add-button-div" className="uk-margin">
+              <button id="add-button" type="submit" value="Submit" className="uk-button uk-button-large uk-button-primary" disabled={disabled}>Add</button>
+          </div>
+        </form>
+        </div>
       </div>
+
     );
   }
 }
