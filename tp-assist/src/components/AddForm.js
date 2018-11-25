@@ -57,15 +57,13 @@ class AddForm extends Component {
       <div id="add-card" className="uk-card uk-card-default uk-card-body uk-border-rounded">
         <div id="form-body" className="uk-container">
         <form className="uk-form-horizontal uk-margin-large" onSubmit={this.handleSubmit}>
-          <div className="uk-margin">
               <label className="uk-form-label" htmlFor="input-name">Name</label>
-                  <input className="uk-input" id="input-name" type="text" placeholder="John Crapper" value={this.state.name} onChange={this.handleChangeName} />
-          </div>
+              <input className="uk-input uk-form-large" id="input-name" type="text" placeholder="John Crapper" value={this.state.name} onChange={this.handleChangeName} />
           <div className="uk-margin">
               <label className="uk-form-label" htmlFor="input-number">Number</label>
-                  <input className="uk-input" id="input-number" type="text" placeholder="1 (647) 244-7667" value={this.state.number} onChange={this.handleChangeNumber} />
+              <input className="uk-input uk-form-large" id="input-number" type="text" placeholder="1 (647) 244-7667" value={this.state.number} onChange={this.handleChangeNumber} />
           </div>
-          <div id="add-button-div" className="uk-margin">
+          <div id="add-button-div">
               <button id="add-button" type="submit" value="Submit" className="uk-button uk-button-large uk-button-primary" disabled={disabled}>Add</button>
           </div>
         </form>
