@@ -20,7 +20,7 @@ class UserList extends Component {
       //TODO format number
       return (
         <div id="userlist-body" className="uk-container">
-        <table className="uk-table uk-table-divider uk-table-small uk-table-hover">
+        <table className="uk-table uk-table-divider uk-table-small">
             <thead>
                 <tr>
                     <th>Name</th>

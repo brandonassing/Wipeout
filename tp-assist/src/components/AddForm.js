@@ -60,7 +60,7 @@ class AddForm extends Component {
               <label className="uk-form-label" htmlFor="input-name">Name</label>
               <input className="uk-input uk-form-large" id="input-name" type="text" placeholder="John Crapper" value={this.state.name} onChange={this.handleChangeName} />
           <div className="uk-margin">
-              <label className="uk-form-label" htmlFor="input-number">Number</label>
+              <label className="uk-form-label" htmlFor="input-number">Phone number</label>
               <input className="uk-input uk-form-large" id="input-number" type="text" placeholder="1 (647) 244-7667" value={this.state.number} onChange={this.handleChangeNumber} />
           </div>
           <div id="add-button-div">
