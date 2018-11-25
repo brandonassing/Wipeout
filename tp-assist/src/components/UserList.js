@@ -15,9 +15,22 @@ class UserList extends Component {
   render() {
     const { isLoaded, userList } = this.props;
     if (!isLoaded) {
-      return <div id="userlist-body" className="uk-container">Loading...</div>;
+      return (
+        <div id="userlist-body" className="uk-container">
+        <table className="uk-table uk-table-striped uk-table-small">
+            <thead>
+                <tr>
+                    <th><p className="table-header-text table-header-name">Name</p></th>
+                    <th><p className="table-header-text table-header-number">Number</p></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        </div>
+      );
     } else {
-      //TODO format number
       return (
         <div id="userlist-body" className="uk-container">
         <table className="uk-table uk-table-striped uk-table-small">
