@@ -23,17 +23,17 @@ class UserList extends Component {
         <table className="uk-table uk-table-striped uk-table-small">
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Number</th>
+                    <th><p className="table-header-text table-header-name">Name</p></th>
+                    <th><p className="table-header-text table-header-number">Number</p></th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
                 {userList.map(item => (
                   <tr key={item[0]}>
-                    <td>{item[0]}</td>
-                    <td>{"(" + item[1].slice(1, 4) + ") " + item[1].slice(4, 7) + "-" + item[1].slice(7, 11) }</td>
-                    <td><button id={item[0]} className="uk-button uk-button-default" type="button" onClick={(e) => { this.remove(e); }}>Remove</button></td>
+                    <td><p className="table-content-text table-name">{item[0]}</p></td>
+                    <td><p className="table-content-text table-number">{"(" + item[1].slice(1, 4) + ") " + item[1].slice(4, 7) + "-" + item[1].slice(7, 11) }</p></td>
+                    <td className="td-table-button"><button id={item[0]} className="uk-button uk-button-default table-button uk-float-right" type="button" onClick={(e) => { this.remove(e); }}>Remove</button></td>
                   </tr>
                 ))}
             </tbody>
