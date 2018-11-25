@@ -12,18 +12,17 @@
 
 #app-background {
   height: 75vh;
-  background-color: #EFF7FF;
+  background-color: #DDEEFF;
 }
 
 #app-body {
   display: flex;
   margin-left: 300px;
   margin-right: 300px;
-  align-items: center;
 }
 
 #app-add {
-  margin-left: 100px;
+  margin-left: 10px;
   width: 550px;
 }
 
@@ -36,21 +35,21 @@
   font-size: 70px;
   line-height: 100%;
   color: #007AFF;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
 
 }
 
 #header-text {
-  padding-top: 40px;
+  padding-top: 25px;
   margin: 0px 50px 50px 80px;
   font-size: 30px;
   color: #007AFF;
 }
 
 #app-gif {
-  background-color: red;
-  /* height: 507px;
-  width: 818px; */
-  height: 695px;
-  min-width: 350px;
+  width: 450px;
+}
+
+#gif {
+  width: 100%;
 }
