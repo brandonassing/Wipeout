@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import UserList from './components/UserList';
 import AddForm from './components/AddForm';
+import Footer from './components/Footer';
 import gif from './assets/phone.gif';
 
 class App extends Component {
@@ -103,7 +104,7 @@ class App extends Component {
           </div>
         </div>
         <UserList userList={this.state.userList} isLoaded={this.state.isLoaded} removeCallback={this.remove} />
-
+        <Footer />
       </div>
     );
   }
