@@ -31,9 +31,9 @@ exports.config = {
         ]
     },
 
-    specs: [ 'features/**/*.feature' ],
+    specs: [ 'features/*.feature' ],
     cucumberOpts: {
-        require:    [ 'features/**/*.ts' ],
+        require:    [ 'src/step_definitions/*.ts' ],
         format:     'pretty',
         compiler:   'ts:ts-node/register'
     },
