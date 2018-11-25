@@ -29,7 +29,6 @@ postalCode.submit()
 
 #driver.find_element_by_xpath("//*[@id='_dpz']/header/nav[1]/div[1]/ul/li[3]/a").click()
 
-driver.refresh()
 driver.find_element_by_css_selector("#csn-BuildYourOwn > a").click()
 #driver.find_element_by_css_selector("#csn-BuildYourOwn > a").click()
 
