@@ -26,14 +26,37 @@
   font-size: 16px;
 }
 
+.uk-button-primary {
+  background-color: #007AFF;
+  background-image: linear-gradient(to right, #007AFF , #9586FD);
+}
+
+
 .uk-button-primary:disabled {
-  background-color: #DEDEDE;
+  background-color: #007AFF;
+  background-image: none;
 }
 
 .uk-input {
   background-color: #F5F5F5;
   border-radius: 8px;
   border: none;
+}
+
+.uk-input:focus + .uk-form-label {
+    color: #007AFF;
+}
+
+.input-group {
+  /* direction: "rtl"; */
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.uk-input:focus {
+  border-style: solid;
+  border-width: 2px;
+
 }
 
 .uk-form-label {

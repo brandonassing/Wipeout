@@ -12,7 +12,7 @@
 
 #app-background {
   height: 75vh;
-  background-color: #DDEEFF;
+  background-image: linear-gradient(to right, #007AFF , #9586FD);
 }
 
 #app-body {
@@ -34,7 +34,7 @@
 #slogan {
   font-size: 70px;
   line-height: 100%;
-  color: #007AFF;
+  color: white;
   margin-bottom: 50px;
 
 }
@@ -43,7 +43,7 @@
   padding-top: 25px;
   margin: 0px 50px 50px 80px;
   font-size: 30px;
-  color: #007AFF;
+  color: white;
 }
 
 #app-gif {

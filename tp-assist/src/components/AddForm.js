@@ -58,11 +58,13 @@ class AddForm extends Component {
       <div id="add-card" className="uk-card uk-card-default uk-card-body uk-border-rounded .uk-box-shadow-large">
         <div id="form-body" className="uk-container">
         <form className="uk-form-horizontal uk-margin-large" onSubmit={this.handleSubmit}>
-              <label className="uk-form-label" htmlFor="input-name">Name</label>
-              <input className="uk-input uk-form-large" id="input-name" type="text" placeholder="John Crapper" value={this.state.name} onChange={this.handleChangeName} />
-          <div className="uk-margin">
-              <label className="uk-form-label" htmlFor="input-number">Phone number</label>
+          <div className="input-group">
+            <input className="uk-input uk-form-large" id="input-name" type="text" placeholder="John Crapper" value={this.state.name} onChange={this.handleChangeName} />
+            <label className="uk-form-label" htmlFor="input-name">Name</label>
+          </div>
+          <div className="input-group uk-margin">
               <input className="uk-input uk-form-large" id="input-number" type="text" placeholder="1 (647) 244-7667" value={this.state.number} onChange={this.handleChangeNumber} />
+              <label className="uk-form-label" htmlFor="input-number">Phone number</label>
           </div>
           <div id="add-button-div">
               <button id="add-button" type="submit" value="Submit" className="uk-button uk-button-large uk-button-primary" disabled={disabled}>Doody calls</button>
