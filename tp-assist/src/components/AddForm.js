@@ -15,6 +15,7 @@ class AddForm extends Component {
     };
   }
 
+
   handleChangeName(event) {
     this.setState({
       name: event.target.value
@@ -29,7 +30,7 @@ class AddForm extends Component {
 
   shouldBeDisabled() {
     let rawNum = this.state.number.replace(/[- )()]/g,'');
-    if(this.state.name.length > 0 && !isNaN(rawNum) && (rawNum.length === 10 || (rawNum.length ===11 && rawNum.slice(0,1) === "1"))) {
+    if(this.state.name.length > 0 && (/^[A-Za-z]+$/).test(this.state.name) && !isNaN(rawNum) && (rawNum.length === 10 || (rawNum.length ===11 && rawNum.slice(0,1) === "1"))) {
       return false;
     }
     return true;
