@@ -10,9 +10,11 @@
     src: url("./font/CircularStd-Bold.otf") format("opentype");
 }
 
+$primary-blue: #007AFF;
+
 #app-background {
   height: 75vh;
-  background-image: linear-gradient(to right, #007AFF , #9586FD);
+  background-image: linear-gradient(to right, $primary-blue , #9586FD);
 }
 
 #app-body {

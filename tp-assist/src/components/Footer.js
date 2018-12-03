@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './Footer.css';
-import '../App.css';
+import './Footer.scss';
+import '../App.scss';
 import process from '../assets/howitworks.png';
 import reviews from '../assets/review.png';
 
